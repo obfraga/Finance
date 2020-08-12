@@ -17,7 +17,6 @@
     "sass-loader": "^9.0.3",
     "url-loader": "^4.1.0",
     "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12",
-    "yahoo-finance": "^0.3.6"
+    "webpack-cli": "^3.3.12"
   }
 }
