@@ -5,3 +5,5 @@ obj/
 *.bundle.js
 node_modules/
 *.csproj.user
+package-lock.json
+auto-generated/

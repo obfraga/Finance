@@ -3,7 +3,25 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="src\scripts\js\auto-generated\**" />
+    <Content Remove="src\scripts\js\auto-generated\**" />
+    <EmbeddedResource Remove="src\scripts\js\auto-generated\**" />
+    <None Remove="src\scripts\js\auto-generated\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="src\scripts\app.ts" />
+    <None Remove="src\styles\scss\app.scss" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="src\styles\scss\app.scss" />
+    <Content Include="src\styles\scss\site.scss" />
+  </ItemGroup>
 
 
   <ItemGroup>
@@ -13,12 +31,14 @@
 
 
   <ItemGroup>
-    <Content Update="wwwroot\css\site.css">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Update="wwwroot\js\site.bundle.js">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Folder Include="src\scripts\js\" />
+    <Folder Include="wwwroot\css\" />
+    <Folder Include="wwwroot\js\" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <TypeScriptCompile Include="src\scripts\ts\app.ts" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build">

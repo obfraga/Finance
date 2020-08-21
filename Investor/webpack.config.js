@@ -31,15 +31,20 @@ module.exports = {
         ],
     },
     entry: {
-        site: './wwwroot/js/site.js',
+        app: './src/scripts/js/auto-generated/app.js',
     },
     output: {
         path: path.resolve(__dirname + "/wwwroot/", 'js'),
         filename: '[name].bundle.js',
     },
+    resolve: {
+        alias: {
+            scss: path.resolve(__dirname, './src/styles/scss/'),
+        }
+    },
     plugins: ([
         new MiniCssExtractPlugin({
-            filename: '../css/[name].css'
+            filename: '../css/[name].bundle.css'
         }),
     ]),
 };
