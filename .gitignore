@@ -7,3 +7,4 @@ node_modules/
 *.csproj.user
 package-lock.json
 auto-generated/
+*.Development.json
